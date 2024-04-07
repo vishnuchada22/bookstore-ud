@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    
+</head>
+<body>
+    <div class="header">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt=" Logo" class="logo2">
+        <h1>Bookstore Data Query Interface</h1>
+        <p class="course-info">Course: Web 3 Science: Knowledge & Semantics</p>
+        <p class="course-info">Team members: Manideep Thota, Vishnu Vardhan</p>
+        
+        <a href="{{ url_for('view_csv') }}" class="buttons">View CSV</a>
+        <a href="{{ url_for('view_ttl') }}" class="buttons">Download TTL File</a>
+        <a href="{{ url_for('about') }}" class="buttons">About</a>
+        <a href="/" class="buttons">Home</a>
+        <img src="{{ url_for('static', filename='ud.png') }}" alt=" Logo" class="logo">
+    </div>
+
+    <div class="content">
+        <h2>About Our Project: Bookstore Data Query Interface</h2>
+        <div class="about-info">
+            <p>Our project focuses on developing a user-friendly interface for querying bookstore data. We've structured our data using RDF ontology and stored it in a TTL file for easy access. Our goal is to streamline the exploration of literature by providing a seamless platform for users to discover books, authors, and related information. Through this project, we aim to enhance the accessibility and organization of bookstore data, ultimately improving the reading experience for enthusiasts and scholars alike.</p>
+        </div>
+        <h2>Conclusion</h2>
+        <div class="about-info">
+            <p>Our project has made significant strides in efficiently organizing and accessing bookstore data through RDF ontology and a TTL file. By employing these tools, we've built a robust framework for navigating through literary works, authors, and related information. While there's room for improvement, such as enhancing query performance and expanding the ontology, our project lays a strong foundation for future enhancements. We've contributed to the advancement of literature data organization and knowledge querying, paving the way for further developments in the field.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy;  Bookstore Data Query Interface
+    </div>
+    <script>
+        document.body.style.backgroundImage = "url('{{ url_for('static', filename='image.jpg') }}')";
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundPosition = "center";
+    </script>
+</body>
+</html>

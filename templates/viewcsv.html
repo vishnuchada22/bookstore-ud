@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV File Viewer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    
+</head>
+<body>
+    <div class="header">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt=" Logo" class="logo2">
+        <h1>Bookstore Data Query Interface</h1>
+        <p class="course-info">Course: Web 3 Science: Knowledge & Semantics</p>
+        <p class="course-info">Team members: Manideep Thota, Vishnu Vardhan</p>
+        
+        <a href="{{ url_for('view_csv') }}" class="buttons">View CSV</a>
+        <a href="{{ url_for('view_ttl') }}" class="buttons">Download TTL File</a>
+        <a href="{{ url_for('about') }}" class="buttons">About</a>
+        <a href="/" class="buttons">Home</a>
+        <img src="{{ url_for('static', filename='ud.png') }}" alt=" Logo" class="logo">
+    </div>
+    <div id="csvTable">
+        <table border="1">
+            {% for row in csv_data %}
+            <tr>
+                {% for cell in row %}
+                {% if loop.index == 1 %}
+                <th>{{ cell }}</th>
+                {% else %}
+                <td>{{ cell }}</td>
+                {% endif %}
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div class="footer">
+        &copy;  Bookstore Data Query Interface
+    </div>
+    <script>
+        document.body.style.backgroundImage = "url('{{ url_for('static', filename='image.jpg') }}')";
+        document.body.style.backgroundSize = "100%";
+        document.body.style.backgroundPosition = "center";
+    </script>
+</body>
+</html>

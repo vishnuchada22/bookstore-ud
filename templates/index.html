@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bookstore Data Query Interface</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+
+</head>
+<body>
+    <div class="header">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt=" Logo" class="logo2">
+        <h1>Bookstore Data Query Interface</h1>
+        <p class="course-info">Course: Web 3 Science: Knowledge & Semantics</p>
+        <p class="course-info">Team members: Manideep Thota, Vishnu Vardhan</p>
+        
+        <a href="{{ url_for('view_csv') }}" class="buttons">View CSV</a>
+        <a href="{{ url_for('view_ttl') }}" class="buttons">Download TTL File</a>
+        <a href="{{ url_for('about') }}" class="buttons">About</a>
+        <a href="/" class="buttons">Home</a>
+        <img src="{{ url_for('static', filename='ud.png') }}" alt=" Logo" class="logo">
+    </div>
+    <div class="contentindex">
+        <div class="form-block">
+            <h2 class="form-title">Select a Query:</h2>
+            <form method="POST">
+                <select class="form-select" name="query" id="query-select">
+                    <option value="" selected disabled>Select Query</option> 
+                    {% for key, value in queries.items() %}
+                        <option value="{{ key }}">{{ key }}</option>
+                    {% endfor %}
+                    <option value="other">Other</option>
+                </select>
+                <br>
+                <div class="custom-query-block">
+                    <label class="custom-query-label">Custom Query:</label>
+                    <textarea class="custom-query-input" name="custom-query"></textarea>
+                </div>
+                <br>
+                <input class="form-submit" type="submit" value="Submit">
+            </form>
+        </div>
+        <div class="result-block">
+            <h2 class="result-title">Query Results:</h2>
+            <textarea class="result-textarea" readonly>{{ result_string }}</textarea>
+        </div>
+    </div>
+    <div class="footer">
+        &copy;  Bookstore Data Query Interface
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var querySelect = document.getElementById('query-select');
+            var customQueryBlock = document.querySelector('.custom-query-block');
+
+            querySelect.addEventListener('change', function() {
+                if (querySelect.value === 'other') {
+                    customQueryBlock.style.display = 'block';
+                } else {
+                    customQueryBlock.style.display = 'none';
+                }
+            });
+        });
+        document.body.style.backgroundImage = "url('{{ url_for('static', filename='image.jpg') }}')";
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundPosition = "center";
+    </script>
+</body>
+</html>

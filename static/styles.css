@@ -1,0 +1,214 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #333;
+}
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #ffcc00;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+.header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+.course-info {
+    margin: 5px 10px;
+    margin-bottom: 20px;
+}
+.content {
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Styles */
+.form-block {
+    margin-bottom: 20px;
+}
+
+.form-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.form-select{
+    width: calc(100% - 40px);
+    padding: 10px;
+    
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+}
+.custom-query-input {
+    width: calc(100% - 40px);
+    padding: 10px;
+    height: 50px;
+    border-radius: 5px;
+    
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+}
+
+.form-select:focus,
+.custom-query-input:focus {
+    border-color: #ffcc00;
+}
+
+.custom-query-block {
+    display: none;
+    
+}
+
+.custom-query-label {
+    font-size: 18px;
+}
+
+.form-submit {
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.form-submit:hover {
+    background-color: #ffd633;
+}
+
+/* Result Styles */
+.result-block {
+    margin-top: 20px;
+    
+}
+
+.result-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.result-textarea {
+    width: calc(100% - 40px);
+    height: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Button Styles */
+.buttons {
+    background-color: #ffc107; /* Yellow background color */
+    color: #333; /* Text color */
+    padding: 2px 5px; /* Adjust padding as needed */
+    margin: 5px 15px;  /* Add margin between buttons */
+    text-decoration: none; /* Remove default link underline */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    border: 2px solid #ffc107; /* Yellow border */
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
+}
+.buttons:hover {
+    background-color: #ffca28; /* Darker yellow on hover */
+    border-color: #ffca28; /* Darker yellow border on hover */
+}
+
+/* Logo Styles */
+.logo {
+    margin-right: 10px;
+    vertical-align: middle;
+    position: absolute;
+    top: 20px; 
+    left: 20px; 
+    width: 120px; 
+    height: 120px; 
+    z-index: 999; 
+}
+.logo2 {
+    margin-right: 10px;
+    vertical-align: middle;
+    position: absolute;
+    top: 20px; 
+    right: 20px; 
+    width: 100px; 
+    height: 100px; 
+    z-index: 999; 
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 5px solid #ffcc00;
+}
+
+/* Content Styles */
+.content {
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.7);
+    
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Add this CSS to your styles.css file */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: black; 
+}
+
+
+
+.contentindex {
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.content h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+.content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 10px;
+}
